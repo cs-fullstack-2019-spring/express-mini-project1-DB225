@@ -2,7 +2,7 @@ extends layout
 
 block content
     h1  Edit User
-    form(method="POST" action='/editChange')
+    form(method="POST")
         p
             label(for='id') Enter the ID for the user:
             input(type='text', id='id', name='id', value=findResults.id)

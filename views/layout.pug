@@ -3,11 +3,12 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    nav
+      a(href="/") Home
+      a(href="/find") Find
+      a(href="/createData") Add
+      a(href="/edit") Edit
+      a(href="/delete") Delete
+
   body
-    div.nav
-      a(href='/') Home
-      a(href='/add') Add
-      a(href='/find') Find
-      a(href='/edit') Edit
-      a(href='/delete') Delete
     block content
