@@ -4,21 +4,22 @@ var power = require('../models/heroesModel');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var tst = [
-    {
-      id: 1,
-      name: "Shazam",
-      powers: {
-        intelligence: 90,
-        strength: 70,
-        speed: 12,
-        combat: 70,
-        wealth: 100,
-        image: ""
-      }
-    }
-  ];
-  res.render('index', {allEntries: tst});
+  // var tst = [
+  //   {
+  //     id: 1,
+  //     name: "Shazam",
+  //     powers: {
+  //       intelligence: 90,
+  //       strength: 70,
+  //       speed: 12,
+  //       combat: 70,
+  //       wealth: 100,
+  //       image: ""
+  //     }
+  //   }
+  // ];
+    power.find({}, (error, results)=>
+  res.render('index', {allEntries: results}));
 });
 
 // CREATE a superHero
